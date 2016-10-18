@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  MainVC.h
 //  DemoAnimation
 //
 //  Created by zhangSY on 14-4-3.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
+@interface MainVC : UIViewController
 
 @end
