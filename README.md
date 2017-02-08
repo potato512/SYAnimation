@@ -3,4 +3,5 @@
 
 ![image](./SYAnimationView.gif)
 
-![fireWaterAnimation.gif](./fireWaterAnimation.gif)
+#火焰效果、波浪效果、弹簧效果
+![fireWaterSpring.gif](./fireWaterSpring.gif)

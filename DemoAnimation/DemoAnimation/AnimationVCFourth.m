@@ -54,6 +54,8 @@
     [SYViewAnimation animationFireWithImage:@"fire" view:fireView frame:fireView.bounds];
     [self.view addSubview:fireView];
     
+    // 弹簧动画
+    [self springAnimation];
     
     // 波浪动画
     SYWaterAnimationView *waterView = [[SYWaterAnimationView alloc] initWithFrame:CGRectMake(10.0, 120.0, (self.view.frame.size.width - 10.0 * 2), 100.0) waveColor:[UIColor colorWithRed:73/255.0 green:142/255.0 blue:178/255.0 alpha:0.5] waterColor:[UIColor colorWithRed:73/255.0 green:142/255.0 blue:178/255.0 alpha:0.5]];
@@ -86,6 +88,32 @@
     
     waterView = (SYWaterAnimationView *)[self.view viewWithTag:1001];
     [waterView animationWaterInvalidate];
+}
+
+#pragma mark springAnimation
+
+- (void)springAnimation
+{
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(120.0, 10.0, (self.view.frame.size.width - 10.0 - 120.0), 100.0)];
+    [self.view addSubview:view];
+    view.backgroundColor = [UIColor colorWithWhite:0.5 alpha:0.2];
+
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10.0, 10.0, 50.0, 30.0)];
+    label.backgroundColor = [UIColor redColor];
+    [view addSubview:label];
+    
+    CASpringAnimation *spring = [CASpringAnimation animationWithKeyPath:@"position.x"];
+    spring.damping = 5;
+    spring.stiffness = 100;
+    spring.mass = 1;
+    spring.initialVelocity = 0;
+    spring.fromValue = @(label.layer.position.x);
+    spring.toValue = @(label.layer.position.x + 50.0);
+    spring.autoreverses = YES;
+    spring.repeatCount = MAXFLOAT;
+    spring.duration = spring.settlingDuration;
+    
+    [label.layer addAnimation:spring forKey:spring.keyPath];
 }
 
 #pragma mark lineAnimation
