@@ -4,9 +4,11 @@
 //
 //  Created by zhangSY on 14-4-3.
 //  Copyright (c) 2014年 zhangshaoyu. All rights reserved.
-//
+//  github：https://github.com/potato512/SYAnimation
 
 #import <Foundation/Foundation.h>
+#import <QuartzCore/QuartzCore.h>
+#import <CoreGraphics/CoreGraphics.h>
 
 @interface SYViewAnimation : NSObject
 
@@ -103,6 +105,17 @@
 
 // 旋转同时缩小放大效果
 + (void)animationRotateAndScaleDownUp:(UIView *)view;
+
+#pragma mark - 火焰动画
+
+/**
+ *  火焰动画
+ *
+ *  @param imageName 火焰图片名称
+ *  @param view      父视图
+ *  @param frame     原点尺寸
+ */
++ (void)animationFireWithImage:(NSString *)imageName view:(UIView *)view frame:(CGRect)frame;
 
 #pragma mark - Private API
 

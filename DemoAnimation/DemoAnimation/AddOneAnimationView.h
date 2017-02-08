@@ -4,7 +4,7 @@
 //
 //  Created by zhangSY on 14-4-10.
 //  Copyright (c) 2014年 zhangshaoyu. All rights reserved.
-//
+//  github：https://github.com/potato512/SYAnimation
 
 #import <Foundation/Foundation.h>
 

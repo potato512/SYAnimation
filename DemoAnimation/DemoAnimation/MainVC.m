@@ -11,6 +11,7 @@
 #import "UIViewVCTwo.h"
 #import "UIViewVCThree.h"
 #import "CMSCoinVC.h"
+#import "AnimationVCFourth.h"
 
 @interface MainVC ()
 
@@ -68,7 +69,7 @@
 // 创建视图
 - (void)setUI
 {
-    NSArray *titleArray = [NSArray arrayWithObjects:@"UIView", @"UIViewVCTwo", @"UIViewVCThree", @"硬币翻转", nil];
+    NSArray *titleArray = [NSArray arrayWithObjects:@"UIView", @"UIViewVCTwo", @"UIViewVCThree", @"硬币翻转", @"其他动画", nil];
     NSInteger buttonCount = [titleArray count];
     
     // 主背景视图
@@ -105,9 +106,10 @@
     UIViewVCThree *vcThree = [[UIViewVCThree alloc] init];
     CMSCoinVC *vcFour = [[CMSCoinVC alloc] init];
 //    UILabelVC *vcFive = [[UILabelVC alloc] init];
+    AnimationVCFourth *vcFive = [[AnimationVCFourth alloc] init];
     
     // 视图数组
-    NSArray *vcArray = [NSArray arrayWithObjects:vcOne, vcTwo, vcThree, vcFour, nil];
+    NSArray *vcArray = [NSArray arrayWithObjects:vcOne, vcTwo, vcThree, vcFour, vcFive, nil];
     
     // 视图切换
     [self.navigationController pushViewController:[vcArray objectAtIndex:button.tag] animated:YES];

@@ -5,6 +5,7 @@
 //  Created by zhangshaoyu on 15-1-25.
 //  Copyright (c) 2015年 zhangshaoyu. All rights reserved.
 //  硬币翻转效果
+//  github：https://github.com/potato512/SYAnimation
 
 #import <UIKit/UIKit.h>
 

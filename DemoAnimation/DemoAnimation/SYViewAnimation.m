@@ -312,6 +312,54 @@
     [view.layer addAnimation:animationGroup forKey:@"animationGroup"];
 }
 
+#pragma mark - 火焰动画
+
++ (void)animationFireWithImage:(NSString *)imageName view:(UIView *)view frame:(CGRect)frame
+{
+    if ((imageName && 0 != imageName.length) && view && !CGRectEqualToRect(frame, CGRectZero))
+    {
+        /// 发射器对象
+        CAEmitterLayer *fireEmitter = [[CAEmitterLayer alloc] init];
+        // 发射器在xy平面的中心位置
+        fireEmitter.emitterPosition = CGPointMake((frame.origin.x + frame.size.width) / 2, (frame.origin.y + frame.size.height) / 2);
+        // 发射器的尺寸大小
+        fireEmitter.emitterSize = CGSizeMake(frame.size.width, frame.size.height);
+        // 发射器的发射模式
+        fireEmitter.emitterMode = kCAEmitterLayerOutline;
+        // 发射器的形状
+        fireEmitter.emitterShape = kCAEmitterLayerPoint;
+        // 发射器渲染模式
+        fireEmitter.renderMode = kCAEmitterLayerAdditive;
+        
+        // 发射单元 - 火焰
+        CAEmitterCell *fire = [[CAEmitterCell alloc] init];
+        // 粒子的创建速率，默认为1/s。
+        fire.birthRate = 200.0;
+        // 粒子存活时间
+        fire.lifetime = 0.2;
+        // 粒子的生存时间容差
+        fire.lifetimeRange = 0.5;
+        fire.color = [UIColor colorWithRed:0.8 green:0.4 blue:0.2 alpha:0.1].CGColor;
+        fire.contents = (__bridge id _Nullable)([UIImage imageNamed:imageName].CGImage);
+        fire.name = @"fire";
+        // 粒子的速度
+        fire.velocity = 35.0;
+        // 粒子动画的速度容差
+        fire.velocityRange = 10.0;
+        // 粒子在xy平面的发射角度
+        fire.emissionLongitude = (M_PI + M_PI_2);
+        // 粒子发射角度的容差
+        fire.emissionRange = (M_PI_2);
+        // 缩放速度
+        fire.scaleSpeed = 0.3;
+        // 旋转度
+        fire.spin = 0.2;
+        
+        fireEmitter.emitterCells = @[fire];
+        [view.layer addSublayer:fireEmitter];
+    }
+}
+
 #pragma mark - Private API
 
 + (void)animationFlipFromTop:(UIView *)view
