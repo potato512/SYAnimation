@@ -7,7 +7,7 @@
 //
 
 #import "CMSCoinVC.h"
-#import "CoinViewAnimation.h"
+#import "SYCoinAnimationView.h"
 
 @interface CMSCoinVC ()
 
@@ -49,7 +49,7 @@
     UIImageView *firstImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"profile.png"]];
     UIImageView *secondImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"second.jpg"]];
     
-    CoinViewAnimation *coinView = [[CoinViewAnimation alloc] initWithFrame:CGRectMake(50.0, 50.0, 120.0, 120.0) view:self.view primaryView:firstImageView secondaryView:secondImageView];
+    SYCoinAnimationView *coinView = [[SYCoinAnimationView alloc] initWithFrame:CGRectMake(50.0, 50.0, 120.0, 120.0) view:self.view primaryView:firstImageView secondaryView:secondImageView];
     coinView.backgroundColor = [UIColor colorWithWhite:0.5 alpha:0.3];
 }
 

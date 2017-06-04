@@ -1,22 +1,22 @@
 //
-//  CoinViewAnimation.m
+//  SYCoinAnimationView.m
 //  zhangshaoyu
 //
 //  Created by zhangshaoyu on 15-1-25.
 //  Copyright (c) 2015年 zhangshaoyu. All rights reserved.
 //
 
-#import "CoinViewAnimation.h"
+#import "SYCoinAnimationView.h"
 #import <QuartzCore/QuartzCore.h>
 
-@interface CoinViewAnimation ()
+@interface SYCoinAnimationView ()
 {
     bool displayingPrimary;
 }
 
 @end
 
-@implementation CoinViewAnimation
+@implementation SYCoinAnimationView
 
 // 初始化
 - (id)initWithFrame:(CGRect)frame view:(UIView *)superview primaryView:(UIView *)primaryView secondaryView:(UIView *)secondaryView
@@ -89,6 +89,7 @@
 }
 
 #pragma mark - 响应方法
+
 - (void)flipTouched:(UITapGestureRecognizer *)sender
 {
     UIView *fromView = (displayingPrimary ? self.primaryView : self.secondaryView);

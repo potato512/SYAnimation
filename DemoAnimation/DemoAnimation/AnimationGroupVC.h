@@ -1,5 +1,5 @@
 //
-//  UIViewVCThree.h
+//  AnimationGroupVC.h
 //  DemoAnimation
 //
 //  Created by zhangshaoyu on 15-1-25.
@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface UIViewVCThree : UIViewController
+@interface AnimationGroupVC : BaseViewController
 
 @end

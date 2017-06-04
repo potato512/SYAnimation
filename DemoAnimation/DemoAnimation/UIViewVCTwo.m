@@ -9,7 +9,7 @@
 #import "UIViewVCTwo.h"
 
 // 导入封装方法头文件
-#import "AddOneAnimationView.h"
+#import "SYAddNumberAnimationView.h"
 
 @interface UIViewVCTwo ()
 
@@ -108,7 +108,7 @@
 //    [self showRoundMenu];
     
     // 使用封装方法
-    [AddOneAnimationView showAnimationAddOne:self.animationImageView];
+    [SYAddNumberAnimationView showAnimationAddOne:self.animationImageView];
 }
 
 // 动画

@@ -1,29 +1,29 @@
 //
-//  UIViewVCThree.m
+//  AnimationGroupVC.m
 //  DemoAnimation
 //
 //  Created by zhangshaoyu on 15-1-25.
 //  Copyright (c) 2015年 zhangshaoyu. All rights reserved.
 //
 
-#import "UIViewVCThree.h"
+#import "AnimationGroupVC.h"
 #import "SYViewAnimation.h"
 
-@interface UIViewVCThree ()
+@interface AnimationGroupVC ()
 {
     UIImageView *animationImageView;
 }
 
 @end
 
-@implementation UIViewVCThree
+@implementation AnimationGroupVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
     // 导航栏标题
-    [self.navigationItem setTitle:@"动画效果"];
+    [self.navigationItem setTitle:@"动画效果集合"];
     
     [self setUI];
 }

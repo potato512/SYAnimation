@@ -58,6 +58,7 @@
 - (void)loadView
 {
     [super loadView];
+    
     [self.view setBackgroundColor:[UIColor whiteColor]];
 }
 

@@ -7,13 +7,19 @@
 //
 
 #import "MainVC.h"
-#import "UIViewVC.h"
-#import "UIViewVCTwo.h"
-#import "UIViewVCThree.h"
-#import "CMSCoinVC.h"
-#import "AnimationVCFourth.h"
+//#import "UIViewVC.h"
+//#import "UIViewVCTwo.h"
+//#import "AnimationGroupVC.h"
+//#import "CMSCoinVC.h"
+//#import "AnimationVCFourth.h"
+#import "AnimationRotationVC.h"
+#import "AnimationShakeVC.h"
+#import "AnimationHeartVC.h"
 
-@interface MainVC ()
+
+@interface MainVC () <UITableViewDelegate, UITableViewDataSource>
+
+@property (nonatomic, strong) NSArray *array;
 
 @end
 
@@ -33,10 +39,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    // 导航栏标题
-    [self.navigationItem setTitle:@"动画Animation"];
-    
-    // 视图
+    self.title = @"动画Animation";
     [self setUI];
 }
 
@@ -46,74 +49,59 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
-- (void)loadView
-{
-    [super loadView];
-    [self.view setBackgroundColor:[UIColor whiteColor]];
-}
-
-// 自定义函数
-#pragma mark - custom method
-
 // 创建视图
 - (void)setUI
 {
-    NSArray *titleArray = [NSArray arrayWithObjects:@"UIView", @"UIViewVCTwo", @"UIViewVCThree", @"硬币翻转", @"其他动画", nil];
-    NSInteger buttonCount = [titleArray count];
+    self.array = @[@"旋转动画", @"抖动动画", @"心跳动画"];
     
-    // 主背景视图
-    UIScrollView *scrollview = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
-    [scrollview setBackgroundColor:[UIColor clearColor]];
-    [self.view addSubview:scrollview];
-    
-    // 按钮
-    for (int i = 0; i < buttonCount; i++)
+    UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+    [self.view addSubview:tableView];
+    tableView.tableFooterView = [[UIView alloc] init];
+    tableView.delegate = self;
+    tableView.dataSource = self;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.array.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell"];
+    if (cell == nil)
     {
-        UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [scrollview addSubview:btn];
-        [btn setBackgroundColor:[UIColor brownColor]];
-        [btn setFrame:CGRectMake((self.view.frame.size.width - 240) / 2, (44 + 10) * i + 10, 240, 44)];
-        [[btn titleLabel] setTextAlignment:NSTextAlignmentCenter];
-        [[btn titleLabel] setAdjustsFontSizeToFitWidth:YES];
-        [btn setTitle:[titleArray objectAtIndex:i] forState:UIControlStateNormal];
-        [btn addTarget:self action:@selector(buttonClickChangeVC:) forControlEvents:UIControlEventTouchUpInside];
-        [btn setTag:i];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"UITableViewCell"];
     }
     
-    // 总高度，用于设置主视图contentsize
-    CGFloat realHeight = 44 * buttonCount + 10 * (buttonCount + 1);
-    // 重置主视图的contentsize
-    [scrollview setContentSize:CGSizeMake(self.view.frame.size.width, realHeight)];
+    NSString *text = self.array[indexPath.row];
+    cell.textLabel.text = text;
+    
+    return cell;
 }
 
-// 按钮事件
-- (void)buttonClickChangeVC:(UIButton *)button
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // 视图
-    UIViewVC *vcOne = [[UIViewVC alloc] init];
-    UIViewVCTwo *vcTwo = [[UIViewVCTwo alloc] init];
-    UIViewVCThree *vcThree = [[UIViewVCThree alloc] init];
-    CMSCoinVC *vcFour = [[CMSCoinVC alloc] init];
-//    UILabelVC *vcFive = [[UILabelVC alloc] init];
-    AnimationVCFourth *vcFive = [[AnimationVCFourth alloc] init];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    // 视图数组
-    NSArray *vcArray = [NSArray arrayWithObjects:vcOne, vcTwo, vcThree, vcFour, vcFive, nil];
+    UIViewController *nextVC = nil;
+    if (0 == indexPath.row)
+    {
+        // 旋转动画
+        nextVC = [AnimationRotationVC new];
+    }
+    else if (1 == indexPath.row)
+    {
+        // 抖动动画
+        nextVC = [AnimationShakeVC new];
+    }
+    else if (2 == indexPath.row)
+    {
+        // 心跳动画
+        nextVC = [AnimationHeartVC new];
+    }
     
-    // 视图切换
-    [self.navigationController pushViewController:[vcArray objectAtIndex:button.tag] animated:YES];
+    [self.navigationController pushViewController:nextVC animated:YES];
 }
-
 
 @end

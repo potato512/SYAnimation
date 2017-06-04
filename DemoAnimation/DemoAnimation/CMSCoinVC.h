@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface CMSCoinVC : UIViewController
+@interface CMSCoinVC : BaseViewController
 
 @end

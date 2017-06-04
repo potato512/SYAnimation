@@ -15,7 +15,7 @@
 #pragma mark - Custom Animation
 
 /*
- 1 type 各种动画效果  其中除了'fade', `moveIn', `push' , `reveal' ,其他属于似有的API(我是这么认为的,可以点进去看下注释).可以分别使用'kCATransitionFade', 'kCATransitionMoveIn', 'kCATransitionPush', 'kCATransitionReveal'来调用.
+ 1 type 各种动画效果  其中除了'fade', `moveIn', `push' , `reveal' ,其他属于私有的API(我是这么认为的,可以点进去看下注释).可以分别使用'kCATransitionFade', 'kCATransitionMoveIn', 'kCATransitionPush', 'kCATransitionReveal'来调用.
  @"cube"                  立方体翻滚效果
  @"moveIn"                新视图移到旧视图上面
  @"reveal"                显露效果(将旧视图移开,显示下面的新视图)

@@ -13,11 +13,17 @@
 		A755C6731E4AB9840046180B /* to.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A755C6721E4AB9840046180B /* to.jpg */; };
 		A763DE6E1DB5CDDD00970BD6 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A763DE6D1DB5CDDD00970BD6 /* Default-568h@2x.png */; };
 		A79EE0B31A74D14800921697 /* CMSCoinVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A79EE0B21A74D14800921697 /* CMSCoinVC.m */; };
-		A79EE0B61A74D1D800921697 /* CoinViewAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = A79EE0B51A74D1D800921697 /* CoinViewAnimation.m */; };
 		A79EE0BA1A74D50900921697 /* profile.png in Resources */ = {isa = PBXBuildFile; fileRef = A79EE0B81A74D50900921697 /* profile.png */; };
 		A79EE0BC1A74D59400921697 /* second.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A79EE0BB1A74D59400921697 /* second.jpg */; };
-		A79EE0BF1A74E85B00921697 /* UIViewVCThree.m in Sources */ = {isa = PBXBuildFile; fileRef = A79EE0BE1A74E85B00921697 /* UIViewVCThree.m */; };
-		A7B13A191E4AF884002416C4 /* SYWaterAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B13A181E4AF884002416C4 /* SYWaterAnimationView.m */; };
+		A79EE0BF1A74E85B00921697 /* AnimationGroupVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A79EE0BE1A74E85B00921697 /* AnimationGroupVC.m */; };
+		DF939DED1EE45F9F0075010A /* SYAddNumberAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF939DE61EE45F9F0075010A /* SYAddNumberAnimationView.m */; };
+		DF939DEE1EE45F9F0075010A /* SYCoinAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF939DE81EE45F9F0075010A /* SYCoinAnimationView.m */; };
+		DF939DEF1EE45F9F0075010A /* SYViewAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = DF939DEA1EE45F9F0075010A /* SYViewAnimation.m */; };
+		DF939DF01EE45F9F0075010A /* SYWaterAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF939DEC1EE45F9F0075010A /* SYWaterAnimationView.m */; };
+		DF939DF31EE460C00075010A /* AnimationShakeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DF939DF21EE460C00075010A /* AnimationShakeVC.m */; };
+		DF939DF61EE460D00075010A /* AnimationHeartVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DF939DF51EE460D00075010A /* AnimationHeartVC.m */; };
+		DF939DF91EE460EF0075010A /* AnimationRotationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DF939DF81EE460EF0075010A /* AnimationRotationVC.m */; };
+		DF939DFC1EE4613A0075010A /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF939DFB1EE4613A0075010A /* BaseViewController.m */; };
 		E3D32DB818ECD05E00F7B5B4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3D32DB718ECD05E00F7B5B4 /* Foundation.framework */; };
 		E3D32DBA18ECD05E00F7B5B4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3D32DB918ECD05E00F7B5B4 /* CoreGraphics.framework */; };
 		E3D32DBC18ECD05E00F7B5B4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3D32DBB18ECD05E00F7B5B4 /* UIKit.framework */; };
@@ -33,10 +39,8 @@
 		E3D32DE818ECD07E00F7B5B4 /* MainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E3D32DE718ECD07E00F7B5B4 /* MainVC.m */; };
 		E3D32DEB18ECD0E500F7B5B4 /* UIViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E3D32DEA18ECD0E500F7B5B4 /* UIViewVC.m */; };
 		E3D32DED18ECD87600F7B5B4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3D32DEC18ECD87600F7B5B4 /* QuartzCore.framework */; };
-		E3D32DF018ECD8CE00F7B5B4 /* SYViewAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = E3D32DEF18ECD8CE00F7B5B4 /* SYViewAnimation.m */; };
 		E3E4B51F18F628FB0024D4DF /* UIViewVCTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E4B51E18F628FB0024D4DF /* UIViewVCTwo.m */; };
 		E3E4B52118F62C380024D4DF /* icon_10@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E3E4B52018F62C380024D4DF /* icon_10@2x.png */; };
-		E3E4B52418F641A30024D4DF /* AddOneAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E4B52318F641A30024D4DF /* AddOneAnimationView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,14 +62,26 @@
 		A763DE6D1DB5CDDD00970BD6 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		A79EE0B11A74D14800921697 /* CMSCoinVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMSCoinVC.h; sourceTree = "<group>"; };
 		A79EE0B21A74D14800921697 /* CMSCoinVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMSCoinVC.m; sourceTree = "<group>"; };
-		A79EE0B41A74D1D100921697 /* CoinViewAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoinViewAnimation.h; sourceTree = "<group>"; };
-		A79EE0B51A74D1D800921697 /* CoinViewAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoinViewAnimation.m; sourceTree = "<group>"; };
 		A79EE0B81A74D50900921697 /* profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile.png; sourceTree = "<group>"; };
 		A79EE0BB1A74D59400921697 /* second.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = second.jpg; sourceTree = "<group>"; };
-		A79EE0BD1A74E85B00921697 /* UIViewVCThree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewVCThree.h; sourceTree = "<group>"; };
-		A79EE0BE1A74E85B00921697 /* UIViewVCThree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewVCThree.m; sourceTree = "<group>"; };
-		A7B13A171E4AF884002416C4 /* SYWaterAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYWaterAnimationView.h; sourceTree = "<group>"; };
-		A7B13A181E4AF884002416C4 /* SYWaterAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYWaterAnimationView.m; sourceTree = "<group>"; };
+		A79EE0BD1A74E85B00921697 /* AnimationGroupVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationGroupVC.h; sourceTree = "<group>"; };
+		A79EE0BE1A74E85B00921697 /* AnimationGroupVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationGroupVC.m; sourceTree = "<group>"; };
+		DF939DE51EE45F9F0075010A /* SYAddNumberAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYAddNumberAnimationView.h; sourceTree = "<group>"; };
+		DF939DE61EE45F9F0075010A /* SYAddNumberAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYAddNumberAnimationView.m; sourceTree = "<group>"; };
+		DF939DE71EE45F9F0075010A /* SYCoinAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYCoinAnimationView.h; sourceTree = "<group>"; };
+		DF939DE81EE45F9F0075010A /* SYCoinAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYCoinAnimationView.m; sourceTree = "<group>"; };
+		DF939DE91EE45F9F0075010A /* SYViewAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYViewAnimation.h; sourceTree = "<group>"; };
+		DF939DEA1EE45F9F0075010A /* SYViewAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYViewAnimation.m; sourceTree = "<group>"; };
+		DF939DEB1EE45F9F0075010A /* SYWaterAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYWaterAnimationView.h; sourceTree = "<group>"; };
+		DF939DEC1EE45F9F0075010A /* SYWaterAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYWaterAnimationView.m; sourceTree = "<group>"; };
+		DF939DF11EE460C00075010A /* AnimationShakeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationShakeVC.h; sourceTree = "<group>"; };
+		DF939DF21EE460C00075010A /* AnimationShakeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationShakeVC.m; sourceTree = "<group>"; };
+		DF939DF41EE460D00075010A /* AnimationHeartVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationHeartVC.h; sourceTree = "<group>"; };
+		DF939DF51EE460D00075010A /* AnimationHeartVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationHeartVC.m; sourceTree = "<group>"; };
+		DF939DF71EE460EF0075010A /* AnimationRotationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationRotationVC.h; sourceTree = "<group>"; };
+		DF939DF81EE460EF0075010A /* AnimationRotationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationRotationVC.m; sourceTree = "<group>"; };
+		DF939DFA1EE4613A0075010A /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		DF939DFB1EE4613A0075010A /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		E3D32DB418ECD05E00F7B5B4 /* DemoAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3D32DB718ECD05E00F7B5B4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E3D32DB918ECD05E00F7B5B4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -87,13 +103,9 @@
 		E3D32DE918ECD0E500F7B5B4 /* UIViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewVC.h; sourceTree = "<group>"; };
 		E3D32DEA18ECD0E500F7B5B4 /* UIViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewVC.m; sourceTree = "<group>"; };
 		E3D32DEC18ECD87600F7B5B4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		E3D32DEE18ECD8CE00F7B5B4 /* SYViewAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYViewAnimation.h; sourceTree = "<group>"; };
-		E3D32DEF18ECD8CE00F7B5B4 /* SYViewAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYViewAnimation.m; sourceTree = "<group>"; };
 		E3E4B51D18F628FB0024D4DF /* UIViewVCTwo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewVCTwo.h; sourceTree = "<group>"; };
 		E3E4B51E18F628FB0024D4DF /* UIViewVCTwo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewVCTwo.m; sourceTree = "<group>"; };
 		E3E4B52018F62C380024D4DF /* icon_10@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_10@2x.png"; sourceTree = "<group>"; };
-		E3E4B52218F641A30024D4DF /* AddOneAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddOneAnimationView.h; sourceTree = "<group>"; };
-		E3E4B52318F641A30024D4DF /* AddOneAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddOneAnimationView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,19 +133,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A755C66A1E4AB6490046180B /* Animation */ = {
+		DF939DE31EE45F790075010A /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				E3D32DEE18ECD8CE00F7B5B4 /* SYViewAnimation.h */,
-				E3D32DEF18ECD8CE00F7B5B4 /* SYViewAnimation.m */,
-				A79EE0B41A74D1D100921697 /* CoinViewAnimation.h */,
-				A79EE0B51A74D1D800921697 /* CoinViewAnimation.m */,
-				E3E4B52218F641A30024D4DF /* AddOneAnimationView.h */,
-				E3E4B52318F641A30024D4DF /* AddOneAnimationView.m */,
-				A7B13A171E4AF884002416C4 /* SYWaterAnimationView.h */,
-				A7B13A181E4AF884002416C4 /* SYWaterAnimationView.m */,
+				A755C66E1E4AB9520046180B /* fire@2x.png */,
+				A755C6721E4AB9840046180B /* to.jpg */,
+				A755C6701E4AB97C0046180B /* from.jpg */,
+				E3E4B52018F62C380024D4DF /* icon_10@2x.png */,
+				A79EE0B81A74D50900921697 /* profile.png */,
+				A79EE0BB1A74D59400921697 /* second.jpg */,
+				A763DE6D1DB5CDDD00970BD6 /* Default-568h@2x.png */,
 			);
-			name = Animation;
+			name = Images;
+			sourceTree = "<group>";
+		};
+		DF939DE41EE45F9F0075010A /* SYAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				DF939DE51EE45F9F0075010A /* SYAddNumberAnimationView.h */,
+				DF939DE61EE45F9F0075010A /* SYAddNumberAnimationView.m */,
+				DF939DE71EE45F9F0075010A /* SYCoinAnimationView.h */,
+				DF939DE81EE45F9F0075010A /* SYCoinAnimationView.m */,
+				DF939DE91EE45F9F0075010A /* SYViewAnimation.h */,
+				DF939DEA1EE45F9F0075010A /* SYViewAnimation.m */,
+				DF939DEB1EE45F9F0075010A /* SYWaterAnimationView.h */,
+				DF939DEC1EE45F9F0075010A /* SYWaterAnimationView.m */,
+			);
+			name = SYAnimation;
+			path = ../../SYAnimation;
 			sourceTree = "<group>";
 		};
 		E3D32DAB18ECD05E00F7B5B4 = {
@@ -174,24 +201,26 @@
 				E3D32DC718ECD05F00F7B5B4 /* AppDelegate.m */,
 				E3D32DE618ECD07E00F7B5B4 /* MainVC.h */,
 				E3D32DE718ECD07E00F7B5B4 /* MainVC.m */,
+				DF939DFA1EE4613A0075010A /* BaseViewController.h */,
+				DF939DFB1EE4613A0075010A /* BaseViewController.m */,
+				DF939DF11EE460C00075010A /* AnimationShakeVC.h */,
+				DF939DF21EE460C00075010A /* AnimationShakeVC.m */,
+				DF939DF41EE460D00075010A /* AnimationHeartVC.h */,
+				DF939DF51EE460D00075010A /* AnimationHeartVC.m */,
+				DF939DF71EE460EF0075010A /* AnimationRotationVC.h */,
+				DF939DF81EE460EF0075010A /* AnimationRotationVC.m */,
+				A79EE0B11A74D14800921697 /* CMSCoinVC.h */,
+				A79EE0B21A74D14800921697 /* CMSCoinVC.m */,
+				A79EE0BD1A74E85B00921697 /* AnimationGroupVC.h */,
+				A79EE0BE1A74E85B00921697 /* AnimationGroupVC.m */,
 				E3D32DE918ECD0E500F7B5B4 /* UIViewVC.h */,
 				E3D32DEA18ECD0E500F7B5B4 /* UIViewVC.m */,
 				E3E4B51D18F628FB0024D4DF /* UIViewVCTwo.h */,
 				E3E4B51E18F628FB0024D4DF /* UIViewVCTwo.m */,
-				A79EE0B11A74D14800921697 /* CMSCoinVC.h */,
-				A79EE0B21A74D14800921697 /* CMSCoinVC.m */,
-				A79EE0BD1A74E85B00921697 /* UIViewVCThree.h */,
-				A79EE0BE1A74E85B00921697 /* UIViewVCThree.m */,
 				A755C66B1E4AB68B0046180B /* AnimationVCFourth.h */,
 				A755C66C1E4AB68B0046180B /* AnimationVCFourth.m */,
-				A755C66E1E4AB9520046180B /* fire@2x.png */,
-				A755C6721E4AB9840046180B /* to.jpg */,
-				A755C6701E4AB97C0046180B /* from.jpg */,
-				E3E4B52018F62C380024D4DF /* icon_10@2x.png */,
-				A79EE0B81A74D50900921697 /* profile.png */,
-				A79EE0BB1A74D59400921697 /* second.jpg */,
-				A755C66A1E4AB6490046180B /* Animation */,
-				A763DE6D1DB5CDDD00970BD6 /* Default-568h@2x.png */,
+				DF939DE41EE45F9F0075010A /* SYAnimation */,
+				DF939DE31EE45F790075010A /* Images */,
 				E3D32DC918ECD05F00F7B5B4 /* Images.xcassets */,
 				E3D32DBE18ECD05F00F7B5B4 /* Supporting Files */,
 			);
@@ -329,17 +358,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A79EE0BF1A74E85B00921697 /* UIViewVCThree.m in Sources */,
+				A79EE0BF1A74E85B00921697 /* AnimationGroupVC.m in Sources */,
 				E3D32DE818ECD07E00F7B5B4 /* MainVC.m in Sources */,
+				DF939DEE1EE45F9F0075010A /* SYCoinAnimationView.m in Sources */,
+				DF939DF01EE45F9F0075010A /* SYWaterAnimationView.m in Sources */,
 				E3D32DC818ECD05F00F7B5B4 /* AppDelegate.m in Sources */,
-				A7B13A191E4AF884002416C4 /* SYWaterAnimationView.m in Sources */,
-				A79EE0B61A74D1D800921697 /* CoinViewAnimation.m in Sources */,
-				E3E4B52418F641A30024D4DF /* AddOneAnimationView.m in Sources */,
 				A79EE0B31A74D14800921697 /* CMSCoinVC.m in Sources */,
+				DF939DF61EE460D00075010A /* AnimationHeartVC.m in Sources */,
+				DF939DEF1EE45F9F0075010A /* SYViewAnimation.m in Sources */,
 				E3E4B51F18F628FB0024D4DF /* UIViewVCTwo.m in Sources */,
+				DF939DFC1EE4613A0075010A /* BaseViewController.m in Sources */,
 				E3D32DC418ECD05F00F7B5B4 /* main.m in Sources */,
+				DF939DF31EE460C00075010A /* AnimationShakeVC.m in Sources */,
 				E3D32DEB18ECD0E500F7B5B4 /* UIViewVC.m in Sources */,
-				E3D32DF018ECD8CE00F7B5B4 /* SYViewAnimation.m in Sources */,
+				DF939DF91EE460EF0075010A /* AnimationRotationVC.m in Sources */,
+				DF939DED1EE45F9F0075010A /* SYAddNumberAnimationView.m in Sources */,
 				A755C66D1E4AB68B0046180B /* AnimationVCFourth.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

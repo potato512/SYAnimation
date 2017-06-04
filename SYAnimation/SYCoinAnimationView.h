@@ -1,5 +1,5 @@
 //
-//  CoinViewAnimation.h
+//  SYCoinAnimationView.h
 //  zhangshaoyu
 //
 //  Created by zhangshaoyu on 15-1-25.
@@ -9,7 +9,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CoinViewAnimation : UIView
+@interface SYCoinAnimationView : UIView
 
 /// 硬币翻转效果实例化视图
 - (id)initWithFrame:(CGRect)frame view:(UIView *)superview primaryView:(UIView *)primaryView secondaryView:(UIView *)secondaryView;
