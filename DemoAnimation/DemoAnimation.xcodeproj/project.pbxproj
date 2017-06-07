@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A70F7DF21EE7F0A10086A36D /* AnimationTransitionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A70F7DF11EE7F0A10086A36D /* AnimationTransitionVC.m */; };
 		A755C66D1E4AB68B0046180B /* AnimationVCFourth.m in Sources */ = {isa = PBXBuildFile; fileRef = A755C66C1E4AB68B0046180B /* AnimationVCFourth.m */; };
 		A755C66F1E4AB9520046180B /* fire@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A755C66E1E4AB9520046180B /* fire@2x.png */; };
 		A755C6711E4AB97C0046180B /* from.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A755C6701E4AB97C0046180B /* from.jpg */; };
@@ -54,6 +55,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A70F7DF01EE7F0A10086A36D /* AnimationTransitionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationTransitionVC.h; sourceTree = "<group>"; };
+		A70F7DF11EE7F0A10086A36D /* AnimationTransitionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationTransitionVC.m; sourceTree = "<group>"; };
 		A755C66B1E4AB68B0046180B /* AnimationVCFourth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationVCFourth.h; sourceTree = "<group>"; };
 		A755C66C1E4AB68B0046180B /* AnimationVCFourth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationVCFourth.m; sourceTree = "<group>"; };
 		A755C66E1E4AB9520046180B /* fire@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fire@2x.png"; sourceTree = "<group>"; };
@@ -133,6 +136,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A70F7DEF1EE7F0790086A36D /* AnimationTransition */ = {
+			isa = PBXGroup;
+			children = (
+				A70F7DF01EE7F0A10086A36D /* AnimationTransitionVC.h */,
+				A70F7DF11EE7F0A10086A36D /* AnimationTransitionVC.m */,
+			);
+			name = AnimationTransition;
+			sourceTree = "<group>";
+		};
 		DF939DE31EE45F790075010A /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -219,6 +231,7 @@
 				E3E4B51E18F628FB0024D4DF /* UIViewVCTwo.m */,
 				A755C66B1E4AB68B0046180B /* AnimationVCFourth.h */,
 				A755C66C1E4AB68B0046180B /* AnimationVCFourth.m */,
+				A70F7DEF1EE7F0790086A36D /* AnimationTransition */,
 				DF939DE41EE45F9F0075010A /* SYAnimation */,
 				DF939DE31EE45F790075010A /* Images */,
 				E3D32DC918ECD05F00F7B5B4 /* Images.xcassets */,
@@ -372,6 +385,7 @@
 				DF939DF31EE460C00075010A /* AnimationShakeVC.m in Sources */,
 				E3D32DEB18ECD0E500F7B5B4 /* UIViewVC.m in Sources */,
 				DF939DF91EE460EF0075010A /* AnimationRotationVC.m in Sources */,
+				A70F7DF21EE7F0A10086A36D /* AnimationTransitionVC.m in Sources */,
 				DF939DED1EE45F9F0075010A /* SYAddNumberAnimationView.m in Sources */,
 				A755C66D1E4AB68B0046180B /* AnimationVCFourth.m in Sources */,
 			);

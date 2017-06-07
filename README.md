@@ -9,3 +9,10 @@
 
 # 转场动画效果
 
+![AnimationTransition.gif](./AnimationTransition.gif)
+
+
+#### 修改说明
+* 20170607
+  * 添加转场动画
+

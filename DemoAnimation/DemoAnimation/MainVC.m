@@ -12,6 +12,7 @@
 //#import "AnimationGroupVC.h"
 //#import "CMSCoinVC.h"
 //#import "AnimationVCFourth.h"
+#import "AnimationTransitionVC.h"
 #import "AnimationRotationVC.h"
 #import "AnimationShakeVC.h"
 #import "AnimationHeartVC.h"
@@ -52,7 +53,7 @@
 // 创建视图
 - (void)setUI
 {
-    self.array = @[@"旋转动画", @"抖动动画", @"心跳动画"];
+    self.array = @[@"转场动画", @"旋转动画", @"抖动动画", @"心跳动画"];
     
     UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     [self.view addSubview:tableView];
@@ -87,15 +88,20 @@
     UIViewController *nextVC = nil;
     if (0 == indexPath.row)
     {
+        // 转场动画
+        nextVC = [AnimationTransitionVC new];
+    }
+    else if (1 == indexPath.row)
+    {
         // 旋转动画
         nextVC = [AnimationRotationVC new];
     }
-    else if (1 == indexPath.row)
+    else if (2 == indexPath.row)
     {
         // 抖动动画
         nextVC = [AnimationShakeVC new];
     }
-    else if (2 == indexPath.row)
+    else if (3 == indexPath.row)
     {
         // 心跳动画
         nextVC = [AnimationHeartVC new];
